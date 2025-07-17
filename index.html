@@ -10,11 +10,13 @@
       font-family: 'Segoe UI', sans-serif;
       background-color: #111;
       color: #eee;
+      transition: background-color 0.3s ease;
     }
     header {
       background-color: #222;
       padding: 2rem;
       text-align: center;
+      animation: fadeInDown 1s ease-out;
     }
     header h1 {
       margin: 0;
@@ -28,6 +30,7 @@
       padding: 2rem;
       max-width: 900px;
       margin: auto;
+      animation: fadeInUp 1s ease-out;
     }
     h2 {
       border-bottom: 2px solid #444;
@@ -36,10 +39,17 @@
     }
     .project {
       margin-bottom: 2rem;
+      transition: transform 0.3s ease;
+    }
+    .project:hover {
+      transform: translateY(-5px);
     }
     .project a {
       color: #66ccff;
       text-decoration: none;
+    }
+    .project a:hover {
+      text-decoration: underline;
     }
     .verse {
       font-style: italic;
@@ -60,26 +70,43 @@
       font-weight: bold;
       margin-top: 1rem;
       display: inline-block;
+      transition: background-color 0.3s ease;
+    }
+    .button:hover {
+      background-color: #33bbff;
+    }
+    footer {
+      text-align: center;
+      padding: 1rem;
+      color: #666;
+    }
+    @keyframes fadeInDown {
+      from { opacity: 0; transform: translateY(-20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    @keyframes fadeInUp {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
     }
   </style>
 </head>
 <body>
   <header>
     <h1>Oluwaleke Oni</h1>
-    <p>Faith-Driven Data Analyst | Purpose ï Insight ï Impact</p>
+    <p>Faith-Driven Data Analyst | Purpose ‚Ä¢ Insight ‚Ä¢ Impact</p>
   </header>
 
   <section>
     <h2>About Me</h2>
     <p>
-      I'm Oluwaleke ó a Christian, husband, and aspiring data analyst passionate about using data for purposeful impact.
-      Iíve worked on projects in ETL, machine learning, and data visualization using tools like Python, SQL, Power BI, and Excel.
+      I'm Oluwaleke ‚Äî a Christian, husband, and aspiring data analyst passionate about using data for purposeful impact.
+      I‚Äôve worked on projects in ETL, machine learning, and data visualization using tools like Python, SQL, Power BI, and Excel.
     </p>
     <p>
-      My journey has been marked by both struggle and growth, but through it all, Iím learning to be consistent, faithful, and impactful.
+      My journey has been marked by both struggle and growth, but through it all, I‚Äôm learning to be consistent, faithful, and impactful.
     </p>
     <p class="verse">
-      ìThough your beginning was small, your latter days will be very great.î ó Job 8:7
+      ‚ÄúThough your beginning was small, your latter days will be very great.‚Äù ‚Äî Job 8:7
     </p>
     <a class="button" href="./Oluwaleke_CV.pdf" download>Download My CV</a>
   </section>
@@ -105,13 +132,13 @@
 
   <section class="contact">
     <h2>Contact</h2>
-    <p>Letís connect and build something meaningful together.</p>
+    <p>Let‚Äôs connect and build something meaningful together.</p>
     <a href="mailto:youremail@example.com">Email Me</a>
     <a href="https://www.linkedin.com/in/oluwaleke-oni-1b788799/">LinkedIn</a>
   </section>
 
-  <footer style="text-align:center; padding:1rem; color:#666;">
-    <p>ìWhatever you do, work at it with all your heartÖî ó Colossians 3:23</p>
+  <footer>
+    <p>‚ÄúWhatever you do, work at it with all your heart‚Ä¶‚Äù ‚Äî Colossians 3:23</p>
   </footer>
 </body>
 </html>
